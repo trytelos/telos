@@ -92,7 +92,7 @@
 /* ── Light mode: Manus-inspired (#FFFFFF bg, #34322D text, #F8F8F8 gray) ── */
 :root {
   --radius: 0.75rem;
-  --background: #FFFFFF;
+  --background: #FAF8F4;
   --foreground: #34322D;
   --card: #FFFFFF;
   --card-foreground: #34322D;
@@ -100,34 +100,34 @@
   --popover-foreground: #34322D;
   --primary: #34322D;
   --primary-foreground: #FFFFFF;
-  --secondary: #F8F8F8;
+  --secondary: #F8F6F1;
   --secondary-foreground: #34322D;
-  --muted: #F8F8F8;
-  --muted-foreground: #8A8880;
-  --accent: #F0F0EE;
+  --muted: #F8F6F1;
+  --muted-foreground: #6F6A60;
+  --accent: #F1E9D8;
   --accent-foreground: #34322D;
-  --destructive: #D94040;
+  --destructive: #B84A3A;
   --destructive-foreground: #FFFFFF;
-  --border: #E8E8E6;
-  --input: #E8E8E6;
+  --border: #E7E1D7;
+  --input: #E7E1D7;
   --ring: #34322D;
 
   --color-one: #34322D;
-  --color-two: #8A8880;
-  --color-three: #C4C2BC;
+  --color-two: #6F6A60;
+  --color-three: #D8D0C2;
 
   --chart-1: #34322D;
-  --chart-2: #8A8880;
-  --chart-3: #C4C2BC;
-  --chart-4: #E8E8E6;
-  --chart-5: #F8F8F8;
-  --sidebar: #FFFFFF;
+  --chart-2: #6F6A60;
+  --chart-3: #D8D0C2;
+  --chart-4: #E7E1D7;
+  --chart-5: #F8F6F1;
+  --sidebar: #FAF8F4;
   --sidebar-foreground: #34322D;
   --sidebar-primary: #34322D;
   --sidebar-primary-foreground: #FFFFFF;
-  --sidebar-accent: #F8F8F8;
+  --sidebar-accent: #F8F6F1;
   --sidebar-accent-foreground: #34322D;
-  --sidebar-border: #E8E8E6;
+  --sidebar-border: #E7E1D7;
   --sidebar-ring: #34322D;
 }
 
