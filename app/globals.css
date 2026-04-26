@@ -1,0 +1,188 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --navigation-height: 3.5rem;
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+
+  --animate-accordion-down: accordion-down 0.2s ease-out;
+  --animate-accordion-up: accordion-up 0.2s ease-out;
+  --animate-border-beam: border-beam calc(var(--duration) * 1s) infinite linear;
+  --animate-image-glow: image-glow 4100ms 600ms ease-out forwards;
+  --animate-fade-in: fade-in 800ms var(--animation-delay, 0ms) ease forwards;
+  --animate-fade-up: fade-up 800ms var(--animation-delay, 0ms) ease forwards;
+  --animate-shimmer: shimmer 8s infinite;
+  --animate-marquee: marquee var(--duration) infinite linear;
+  --animate-marquee-vertical: marquee-vertical var(--duration) linear infinite;
+
+  @keyframes accordion-down {
+    from { height: 0; }
+    to { height: var(--radix-accordion-content-height); }
+  }
+  @keyframes accordion-up {
+    from { height: var(--radix-accordion-content-height); }
+    to { height: 0; }
+  }
+  @keyframes border-beam {
+    100% { offset-distance: 100%; }
+  }
+  @keyframes image-glow {
+    0% { opacity: 0; animation-timing-function: cubic-bezier(0.74, 0.25, 0.76, 1); }
+    10% { opacity: 0.5; animation-timing-function: cubic-bezier(0.12, 0.01, 0.08, 0.99); }
+    100% { opacity: 0.25; }
+  }
+  @keyframes fade-in {
+    from { opacity: 0; transform: translateY(-8px); }
+    to { opacity: 1; transform: none; }
+  }
+  @keyframes fade-up {
+    from { opacity: 0; transform: translateY(16px); }
+    to { opacity: 1; transform: none; }
+  }
+  @keyframes shimmer {
+    0%, 90%, 100% { background-position: calc(-100% - var(--shimmer-width)) 0; }
+    30%, 60% { background-position: calc(100% + var(--shimmer-width)) 0; }
+  }
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(calc(-100% - var(--gap))); }
+  }
+  @keyframes marquee-vertical {
+    from { transform: translateY(0); }
+    to { transform: translateY(calc(-100% - var(--gap))); }
+  }
+}
+
+/* ── Light mode: Manus-inspired (#FFFFFF bg, #34322D text, #F8F8F8 gray) ── */
+:root {
+  --radius: 0.75rem;
+  --background: #FFFFFF;
+  --foreground: #34322D;
+  --card: #FFFFFF;
+  --card-foreground: #34322D;
+  --popover: #FFFFFF;
+  --popover-foreground: #34322D;
+  --primary: #34322D;
+  --primary-foreground: #FFFFFF;
+  --secondary: #F8F8F8;
+  --secondary-foreground: #34322D;
+  --muted: #F8F8F8;
+  --muted-foreground: #8A8880;
+  --accent: #F0F0EE;
+  --accent-foreground: #34322D;
+  --destructive: #D94040;
+  --destructive-foreground: #FFFFFF;
+  --border: #E8E8E6;
+  --input: #E8E8E6;
+  --ring: #34322D;
+
+  --color-one: #34322D;
+  --color-two: #8A8880;
+  --color-three: #C4C2BC;
+
+  --chart-1: #34322D;
+  --chart-2: #8A8880;
+  --chart-3: #C4C2BC;
+  --chart-4: #E8E8E6;
+  --chart-5: #F8F8F8;
+  --sidebar: #FFFFFF;
+  --sidebar-foreground: #34322D;
+  --sidebar-primary: #34322D;
+  --sidebar-primary-foreground: #FFFFFF;
+  --sidebar-accent: #F8F8F8;
+  --sidebar-accent-foreground: #34322D;
+  --sidebar-border: #E8E8E6;
+  --sidebar-ring: #34322D;
+}
+
+/* ── Dark mode: deep warm black, same warmth ── */
+.dark {
+  --background: #1A1918;
+  --foreground: #F0F0EE;
+  --card: #242320;
+  --card-foreground: #F0F0EE;
+  --popover: #242320;
+  --popover-foreground: #F0F0EE;
+  --primary: #F0F0EE;
+  --primary-foreground: #1A1918;
+  --secondary: #2E2D2A;
+  --secondary-foreground: #F0F0EE;
+  --muted: #2E2D2A;
+  --muted-foreground: #9A9890;
+  --accent: #3A3835;
+  --accent-foreground: #F0F0EE;
+  --destructive: #E05555;
+  --destructive-foreground: #FFFFFF;
+  --border: #3A3835;
+  --input: #2E2D2A;
+  --ring: #F0F0EE;
+
+  --color-one: #F0F0EE;
+  --color-two: #9A9890;
+  --color-three: #5A5850;
+
+  --chart-1: #F0F0EE;
+  --chart-2: #9A9890;
+  --chart-3: #5A5850;
+  --chart-4: #3A3835;
+  --chart-5: #2E2D2A;
+  --sidebar: #1A1918;
+  --sidebar-foreground: #F0F0EE;
+  --sidebar-primary: #F0F0EE;
+  --sidebar-primary-foreground: #1A1918;
+  --sidebar-accent: #2E2D2A;
+  --sidebar-accent-foreground: #F0F0EE;
+  --sidebar-border: #3A3835;
+  --sidebar-ring: #F0F0EE;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+    transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+    transition-duration: 350ms;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "rlig" 1, "calt" 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
