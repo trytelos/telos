@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const modules = [
   {
-    label: "Product 1",
+    label: "Intelligent Operations",
     title: "Telos Watch",
     description:
       "A front desk and stay manager copilot that keeps service moving when the phone is ringing, the lobby is full, and guest requests are piling up.",
@@ -24,7 +24,7 @@ const modules = [
     ],
   },
   {
-    label: "Product 2",
+    label: "Smart Guest Experience",
     title: "Telos Haven",
     description:
       "A guest web app anchored around the in-room TV and controlled by phone, giving every guest a modern command center for the stay.",

@@ -26,14 +26,14 @@ export default function HeroSection() {
         initial={{ opacity: 0, y: -10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
-        className="flex justify-center py-4"
+        className="flex justify-center py-5"
       >
-        <h1
-          className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-semibold tracking-[-0.08em] text-foreground"
-          style={{ fontFamily: "Georgia, serif" }}
-        >
-          Telos
-        </h1>
+        <img
+          src="/wattword_transparent.png"
+          alt="Telos"
+          className="h-10 object-contain dark:invert sm:h-12 md:h-16 lg:h-20"
+     
+        />
       </motion.div>
 
       <motion.p
