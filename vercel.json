@@ -10,19 +10,11 @@
     },
     {
       "source": "/guestdemo",
-      "destination": "https://telos-guest-demo.vercel.app/guestdemo"
+      "destination": "https://guest-amber.vercel.app/guestdemo"
     },
     {
       "source": "/guestdemo/:path*",
-      "destination": "https://telos-guest-demo.vercel.app/guestdemo/:path*"
-    },
-    {
-      "source": "/rms-api",
-      "destination": "https://telos-rms-api.vercel.app/rms-api"
-    },
-    {
-      "source": "/rms-api/:path*",
-      "destination": "https://telos-rms-api.vercel.app/rms-api/:path*"
+      "destination": "https://guest-amber.vercel.app/guestdemo/:path*"
     }
   ]
 }
