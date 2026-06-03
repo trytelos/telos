@@ -11,7 +11,6 @@ import {
   HowItWorksSection,
   IntegrationsSection,
   PlatformOverviewSection,
-  ProductArchitectureStrip,
   ReportsSection,
 } from "@/components/landing/platform-sections";
 
@@ -19,7 +18,6 @@ export default function Page() {
   return (
     <main className="relative bg-background">
       <HeroSection />
-      <ProductArchitectureStrip />
       <PlatformOverviewSection />
       <EngineSection />
       <ModelsSection />
