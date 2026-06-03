@@ -1,0 +1,28 @@
+{
+  "rewrites": [
+    {
+      "source": "/operationsdemo",
+      "destination": "https://telos-operations-demo.vercel.app/operationsdemo"
+    },
+    {
+      "source": "/operationsdemo/:path*",
+      "destination": "https://telos-operations-demo.vercel.app/operationsdemo/:path*"
+    },
+    {
+      "source": "/guestdemo",
+      "destination": "https://telos-guest-demo.vercel.app/guestdemo"
+    },
+    {
+      "source": "/guestdemo/:path*",
+      "destination": "https://telos-guest-demo.vercel.app/guestdemo/:path*"
+    },
+    {
+      "source": "/rms-api",
+      "destination": "https://telos-rms-api.vercel.app/rms-api"
+    },
+    {
+      "source": "/rms-api/:path*",
+      "destination": "https://telos-rms-api.vercel.app/rms-api/:path*"
+    }
+  ]
+}
