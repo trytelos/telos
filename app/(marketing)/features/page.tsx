@@ -1,17 +1,38 @@
-import FeaturesSection from "@/components/landing/client-section";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ArrowRightIcon } from "lucide-react";
+import FeaturesSection from "@/components/landing/client-section";
+import ModelsSection from "@/components/landing/models-section";
+import {
+  AgentsSection,
+  EngineSection,
+  HorizonSection,
+  HowItWorksSection,
+  IntegrationsSection,
+  OperationsMockSection,
+  PlatformOverviewSection,
+  PlatformPageIntro,
+  ReportsSection,
+} from "@/components/landing/platform-sections";
 
 export default function FeaturesPage() {
   return (
-    <div className="pt-20">
+    <div>
+      <PlatformPageIntro />
+      <PlatformOverviewSection />
+      <EngineSection />
+      <OperationsMockSection />
+      <ModelsSection />
       <FeaturesSection />
-      
-      {/* Minimal CTA */}
+      <AgentsSection />
+      <HowItWorksSection />
+      <HorizonSection />
+      <ReportsSection />
+      <IntegrationsSection />
+
       <section className="mx-auto max-w-[72rem] px-6 md:px-8 py-20 text-center">
         <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl max-w-2xl mx-auto leading-tight mb-6">
-          Ready to give your team an AI stay layer?
+          Ready to make your hotel stack actionable?
         </h2>
         <div className="flex justify-center gap-4">
           <Link href="/pricing">
@@ -22,7 +43,7 @@ export default function FeaturesPage() {
           </Link>
           <Link href="/contact">
             <Button variant="outline" className="h-12 px-8 rounded-full text-base font-medium">
-              Contact Us
+              Request Demo
             </Button>
           </Link>
         </div>

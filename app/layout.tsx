@@ -11,9 +11,9 @@ const fontSans = FontSans({
 });
 
 export const metadata: Metadata = {
-  title: "Telos — AI Agents for Hospitality",
+  title: "Telos - AI Operating Layer for Hotels",
   description:
-    "AI agents for hotels, front desk teams, stay managers, and guests. Telos Watch and Telos Haven connect service, room control, and guest experience.",
+    "Telos connects guest requests, staff workflows, property systems, and owner intelligence into one hotel operating layer.",
 };
 
 export default function RootLayout({

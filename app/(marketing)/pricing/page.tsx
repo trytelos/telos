@@ -37,14 +37,14 @@ const plans = [
     yearlyPrice: 1500,
     arr: "$21.6K",
     target: "Independent hotel, up to 60 rooms, one property",
-    buttonText: "Get Started",
+    buttonText: "Join Waitlist",
     buttonVariant: "default",
     features: [
-      { icon: <Sparkles className="h-4 w-4" />, text: "Telos Haven guest web app" },
-      { icon: <FileSearch className="h-4 w-4" />, text: "TV pairing by QR code or tap" },
+      { icon: <Sparkles className="h-4 w-4" />, text: "Telos Haven" },
+      { icon: <Layers className="h-4 w-4" />, text: "Basic Watch" },
+      { icon: <BarChart3 className="h-4 w-4" />, text: "Basic reporting" },
       { icon: <Globe className="h-4 w-4" />, text: "Room requests, DND, towels, late checkout" },
-      { icon: <Layers className="h-4 w-4" />, text: "Basic front desk dashboard" },
-      { icon: <BarChart3 className="h-4 w-4" />, text: "Guest engagement analytics" },
+      { icon: <FileSearch className="h-4 w-4" />, text: "Guest app and TV pairing" },
       { icon: <ListChecks className="h-4 w-4" />, text: "$8 per active room / month" },
       { icon: <Activity className="h-4 w-4" />, text: "Email support" },
     ],
@@ -55,16 +55,16 @@ const plans = [
     yearlyPrice: 4300,
     arr: "$62.4K",
     target: "Full-service hotel, 60-250 rooms, active front desk team",
-    buttonText: "Start Free Trial",
+    buttonText: "Request Demo",
     buttonVariant: "blue",
     highlight: true,
     features: [
-      { icon: <Sparkles className="h-4 w-4" />, text: "Telos Haven + Telos Watch" },
-      { icon: <FileSearch className="h-4 w-4" />, text: "Overflow call agent for front desk" },
-      { icon: <Globe className="h-4 w-4" />, text: "PMS-synced stay management" },
-      { icon: <Network className="h-4 w-4" />, text: "Guest profiles across stays" },
-      { icon: <BarChart3 className="h-4 w-4" />, text: "Service volume and resolution analytics" },
-      { icon: <Zap className="h-4 w-4" />, text: "Suggested computer-use actions" },
+      { icon: <Sparkles className="h-4 w-4" />, text: "Haven + Watch" },
+      { icon: <Globe className="h-4 w-4" />, text: "PMS-synced operations" },
+      { icon: <Network className="h-4 w-4" />, text: "Guest profiles" },
+      { icon: <BarChart3 className="h-4 w-4" />, text: "Service analytics" },
+      { icon: <Zap className="h-4 w-4" />, text: "Suggested actions" },
+      { icon: <FileSearch className="h-4 w-4" />, text: "Basic daily reports" },
       { icon: <Users className="h-4 w-4" />, text: "Up to 25 staff seats" },
       { icon: <FlaskConical className="h-4 w-4" />, text: "Priority onboarding + support" },
     ],
@@ -78,14 +78,13 @@ const plans = [
     buttonText: "Contact Sales",
     buttonVariant: "default",
     features: [
-      { icon: <Sparkles className="h-4 w-4" />, text: "Full Telos Watch + Haven platform" },
-      { icon: <FileSearch className="h-4 w-4" />, text: "Multi-property guest profiles" },
-      { icon: <Globe className="h-4 w-4" />, text: "Custom local and hotel offering flows" },
-      { icon: <Database className="h-4 w-4" />, text: "Portfolio data warehouse export" },
-      { icon: <Network className="h-4 w-4" />, text: "Centralized manager console" },
-      { icon: <BarChart3 className="h-4 w-4" />, text: "Property-level performance benchmarks" },
-      { icon: <Users className="h-4 w-4" />, text: "Unlimited staff seats" },
-      { icon: <Shield className="h-4 w-4" />, text: "SSO / SAML + audit logs" },
+      { icon: <Sparkles className="h-4 w-4" />, text: "Full Watch + Haven" },
+      { icon: <Database className="h-4 w-4" />, text: "Horizon Portfolio" },
+      { icon: <FileSearch className="h-4 w-4" />, text: "Owner Morning Brief" },
+      { icon: <CircleDollarSign className="h-4 w-4" />, text: "Revenue Leak Finder" },
+      { icon: <Users className="h-4 w-4" />, text: "Labor Optimizer" },
+      { icon: <BarChart3 className="h-4 w-4" />, text: "Multi-property benchmarks" },
+      { icon: <Network className="h-4 w-4" />, text: "Portfolio command center" },
       { icon: <Cpu className="h-4 w-4" />, text: "Dedicated success manager" },
     ],
   },
@@ -98,15 +97,15 @@ const plans = [
     buttonText: "Talk to Us",
     buttonVariant: "default",
     features: [
-      { icon: <Sparkles className="h-4 w-4" />, text: "White-label Telos deployment" },
+      { icon: <Sparkles className="h-4 w-4" />, text: "Full Telos platform" },
+      { icon: <BarChart3 className="h-4 w-4" />, text: "Full Horizon" },
+      { icon: <Network className="h-4 w-4" />, text: "Custom integrations" },
+      { icon: <Globe className="h-4 w-4" />, text: "Revenue and service intelligence" },
+      { icon: <FileSearch className="h-4 w-4" />, text: "Investor/lender reporting" },
       { icon: <Database className="h-4 w-4" />, text: "Private cloud / VPC option" },
-      { icon: <Globe className="h-4 w-4" />, text: "Brand-specific guest journeys" },
-      { icon: <Network className="h-4 w-4" />, text: "Custom PMS, PBX, and TV integrations" },
-      { icon: <BarChart3 className="h-4 w-4" />, text: "Revenue and service intelligence" },
-      { icon: <Shield className="h-4 w-4" />, text: "SOC 2 readiness + custom compliance" },
-      { icon: <Users className="h-4 w-4" />, text: "Unlimited seats + role-based access" },
-      { icon: <Cpu className="h-4 w-4" />, text: "Dedicated infra + SLA guarantee" },
-      { icon: <Code2 className="h-4 w-4" />, text: "Full API access included" },
+      { icon: <Shield className="h-4 w-4" />, text: "SSO / SAML" },
+      { icon: <Activity className="h-4 w-4" />, text: "Audit logs" },
+      { icon: <Cpu className="h-4 w-4" />, text: "SLA" },
     ],
   },
 ];
@@ -153,7 +152,7 @@ export default function PricingPage() {
             Telos Pricing
           </h1>
           <p className="text-base text-muted-foreground max-w-xl mx-auto mb-8">
-            B2B plans for hotels, from boutique properties to multi-property hospitality groups.
+            B2B plans for hotels, from boutique properties to multi-property owner groups.
           </p>
 
           {/* Toggle */}
@@ -222,7 +221,7 @@ export default function PricingPage() {
                   {plan.target}
                 </p>
 
-                <Link href={plan.name === "Enterprise" ? "/contact" : "/login"} className="w-full mb-6">
+                <Link href="/contact" className="w-full mb-6">
                   <Button
                     className={cn(
                       "w-full h-11 rounded-full font-medium text-sm transition-all",
@@ -267,8 +266,8 @@ export default function PricingPage() {
               Build with the Telos API
             </h2>
             <p className="text-sm text-muted-foreground max-w-lg mx-auto">
-              Connect guest requests, room status, AI messages, and service workflows
-              directly into your PMS, PBX, TV stack, or internal tools.
+              Connect guest requests, room status, owner reporting, AI messages, and service workflows
+              directly into your PMS, PBX, TV stack, revenue tools, or internal systems.
             </p>
           </div>
 
@@ -312,7 +311,7 @@ export default function PricingPage() {
               <KeyRound className="h-4 w-4" />
               <span>Connect your hotel systems in days</span>
             </div>
-            <Link href="/login">
+            <Link href="/contact">
               <Button variant="outline" className="rounded-full h-10 px-6 font-medium gap-2">
                 View Integrations <ArrowUpRight className="h-4 w-4" />
               </Button>
@@ -337,7 +336,7 @@ export default function PricingPage() {
                   Custom Plans for Hotels & Portfolios
                 </h4>
                 <p className="text-sm text-muted-foreground mt-1">
-                  Need per-device pricing, custom PMS coverage, or brand-specific workflows? Let&apos;s talk.
+                  Need per-device pricing, custom PMS coverage, Horizon modules, or brand-specific workflows? Let&apos;s talk.
                 </p>
               </div>
             </div>
@@ -350,21 +349,13 @@ export default function PricingPage() {
 
           <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between p-6 rounded-2xl border border-border bg-card gap-4">
             <div className="flex items-center gap-4">
-              <div className="flex gap-2">
-                <div className="p-2 border border-border rounded-lg bg-muted/50 flex flex-col items-center justify-center w-12 h-12">
-                  <span className="text-[8px] font-bold leading-none">AICPA</span>
-                  <span className="text-[10px] font-bold leading-none mt-0.5">SOC 2</span>
-                  <span className="text-[6px] text-muted-foreground leading-none mt-0.5">TYPE II</span>
-                </div>
-                <div className="p-2 border border-border rounded-lg bg-muted/50 flex flex-col items-center justify-center w-12 h-12">
-                  <ShieldCheck className="h-5 w-5 text-foreground mb-0.5" />
-                  <span className="text-[6px] font-bold leading-none">ISO 27001</span>
-                </div>
+              <div className="p-3 bg-muted rounded-xl">
+                <ShieldCheck className="h-6 w-6 text-foreground" />
               </div>
               <div>
-                <h4 className="text-base font-semibold text-foreground">Security & Compliance</h4>
+                <h4 className="text-base font-semibold text-foreground">Controlled Enterprise Deployments</h4>
                 <p className="text-sm text-muted-foreground mt-1">
-                  Enterprise-grade security with industry-standard certifications.
+                  Private cloud options, SSO/SAML, audit logs, SLA terms, and integration planning for larger hotel groups.
                 </p>
               </div>
             </div>

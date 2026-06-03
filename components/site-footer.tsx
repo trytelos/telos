@@ -6,10 +6,11 @@ const footerLinks = [
     label: "Product",
     items: [
       { name: "Pricing", href: "/pricing" },
-      { name: "Features", href: "/features" },
+      { name: "Platform", href: "/features" },
+      { name: "Telos Engine", href: "/features" },
       { name: "Telos Watch", href: "/features" },
       { name: "Telos Haven", href: "/features" },
-      { name: "PMS Sync", href: "/contact" },
+      { name: "Telos Horizon", href: "/features#horizon" },
     ],
   },
   {
@@ -27,12 +28,14 @@ const footerLinks = [
     items: [
       { name: "VS legacy guest apps", href: "#" },
       { name: "VS call centers", href: "#" },
+      { name: "VS disconnected reporting", href: "#" },
     ],
   },
   {
     label: "Business",
     items: [
       { name: "Property plan", href: "/pricing" },
+      { name: "Portfolio plan", href: "/pricing" },
       { name: "Enterprise", href: "/contact" },
     ],
   },
@@ -55,8 +58,8 @@ export function SiteFooter() {
         
         {/* Slogan */}
         <div className="mb-16">
-          <h2 className="text-4xl md:text-5xl font-serif italic font-medium tracking-tight text-white">
-            Every stay, quietly handled.
+          <h2 className="text-4xl md:text-5xl font-medium tracking-tight text-white">
+            Guest intent to staff action to owner intelligence.
           </h2>
         </div>
 

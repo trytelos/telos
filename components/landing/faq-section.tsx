@@ -8,23 +8,23 @@ import { cn } from "@/lib/utils";
 const faqs = [
   {
     question: "What is Telos?",
-    answer: "Telos is a hospitality AI platform for hotels. Telos Watch supports front desk and stay managers, while Telos Haven gives guests a modern TV and phone-based room experience."
+    answer: "Telos is the AI operating layer for hotels. It sits above property systems and turns guest intent, staff workflows, and owner reporting into one system of action."
   },
   {
-    question: "What does Telos Watch do?",
-    answer: "Telos Watch acts as a front desk copilot. It can handle overflow calls, answer common service questions, build guest context across stays, and suggest actions for managers to approve or execute."
+    question: "What products are included?",
+    answer: "Telos Engine powers the platform. Telos Watch supports staff operations, Telos Haven supports the guest room experience, and Telos Horizon gives owners performance intelligence."
   },
   {
-    question: "What does Telos Haven do for guests?",
-    answer: "Telos Haven gives guests a web app for room control, housekeeping requests, DND, towels, late checkout, hotel offerings, food options, entertainment, and AI messaging connected to the front desk."
+    question: "Are the agents controlled by hotel teams?",
+    answer: "Yes. Telos positions agents as hotel-safe workflows with property rules, human escalation, and audit logs. They assist with calls, tasks, incidents, guest questions, revenue flags, and owner briefs."
   },
   {
     question: "Does Telos integrate with hotel systems?",
-    answer: "Yes. Telos is designed to sync room status, guest requests, and stay management workflows with a hotel PMS and front desk dashboard."
+    answer: "Yes. Telos is designed for PMS, PBX, guest messaging, housekeeping, maintenance, reviews, payments, CRS, RMS, TV systems, and reporting exports."
   },
   {
-    question: "How is Telos priced?",
-    answer: "Telos is sold B2B to hotels with a monthly platform subscription and a per-room or per-device component depending on the property size and product bundle."
+    question: "Where are waitlist submissions stored?",
+    answer: "The waitlist API writes JSONL records to data/waitlist-submissions.jsonl by default. Set WAITLIST_STORAGE_PATH to point production submissions to another server-writable path."
   }
 ];
 

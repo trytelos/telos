@@ -10,7 +10,8 @@ import { useEffect, useState } from "react";
 import { ThemeToggle } from "./theme-toggle";
 
 const navLinks = [
-  { label: "Features", href: "/features" },
+  { label: "Platform", href: "/features" },
+  { label: "Horizon", href: "/features#horizon" },
   { label: "Pricing", href: "/pricing" },
   { label: "Contact", href: "/contact" },
 ];

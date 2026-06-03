@@ -4,42 +4,82 @@ import { motion } from "framer-motion";
 
 const modules = [
   {
-    label: "Intelligent Operations",
-    title: "Telos Watch",
+    label: "Core Platform",
+    title: "Telos Engine",
     description:
-      "A front desk and stay manager copilot that keeps service moving when the phone is ringing, the lobby is full, and guest requests are piling up.",
+      "The intelligence and action layer above PMS, guest messaging, housekeeping, maintenance, reviews, payments, calls, TV, and revenue tools.",
     capabilities: [
       {
-        name: "Overflow Call Agent",
-        detail: "Handles guest calls when the front desk is busy, answers common questions, captures intent, and routes urgent issues back to staff.",
+        name: "Property Signals",
+        detail: "Listens to calls, messages, room status, housekeeping state, maintenance tickets, reviews, and revenue signals.",
       },
       {
-        name: "Guest Profiles",
-        detail: "Builds a useful hospitality memory across the property and Telos database so teams understand preferences, history, and service context.",
+        name: "Operational Memory",
+        detail: "Keeps guest preferences, service history, recurring issues, and property patterns available to the right workflow.",
       },
       {
-        name: "Suggested Actions",
-        detail: "Turns conversations into computer-use actions, task suggestions, and manager-ready next steps for faster resolution.",
+        name: "Controlled Actions",
+        detail: "Creates tasks, drafts responses, escalates incidents, recommends pricing, and generates reports with audit logs.",
       },
     ],
   },
   {
-    label: "Smart Guest Experience",
-    title: "Telos Haven",
+    label: "Staff Operations",
+    title: "Telos Watch",
     description:
-      "A guest web app anchored around the in-room TV and controlled by phone, giving every guest a modern command center for the stay.",
+      "The front desk and staff copilot for live requests, call summaries, guest profiles, room board coordination, incidents, and daily reports.",
     capabilities: [
       {
-        name: "TV + Phone Control",
-        detail: "Guests log in with room number and last name, then tap or scan to control TV, streaming, welcome screens, and room experiences.",
+        name: "Call Copilot",
+        detail: "Answers overflow calls, captures guest intent, summarizes the interaction, and routes urgent issues to staff.",
       },
       {
-        name: "Stay Management",
-        detail: "Room status, housekeeping, DND, towels, local offerings, hotel amenities, food options, and late checkout requests in one place.",
+        name: "Room Operations",
+        detail: "Coordinates live requests, room status, housekeeping, maintenance, DND, and schedule visibility.",
       },
       {
-        name: "AI Guest Assistant",
-        detail: "Guest messages flow into an AI assistant connected to the front desk dashboard, reducing repetitive tickets while preserving human escalation.",
+        name: "Manager Reports",
+        detail: "Turns the day into open items, incident logs, staff load, and nightly summaries managers can act on.",
+      },
+    ],
+  },
+  {
+    label: "Guest Experience",
+    title: "Telos Haven",
+    description:
+      "The in-room experience layer across TV and phone, giving guests direct control over requests, room preferences, hotel answers, and service tracking.",
+    capabilities: [
+      {
+        name: "TV and Phone Flow",
+        detail: "Guests can scan, tap, or open a room experience that stays connected to hotel operations.",
+      },
+      {
+        name: "Stay Controls",
+        detail: "Supports room controls, DND, towels, housekeeping, late checkout, concierge answers, and local recommendations.",
+      },
+      {
+        name: "Personalized Help",
+        detail: "Guest preferences and service history inform responses while staff can take over when needed.",
+      },
+    ],
+  },
+  {
+    label: "Owner Intelligence",
+    title: "Telos Horizon",
+    description:
+      "The owner intelligence platform for portfolio visibility, revenue leakage, labor drag, reviews, group quotes, market demand, and daily decisions.",
+    capabilities: [
+      {
+        name: "Portfolio Command Center",
+        detail: "Compares properties by occupancy, ADR, RevPAR, labor efficiency, reviews, and operational risk.",
+      },
+      {
+        name: "Revenue Decisions",
+        detail: "Flags underpriced nights, OTA leakage, group quote risk, demand shifts, and rate recommendations.",
+      },
+      {
+        name: "Owner Morning Brief",
+        detail: "Creates a 6 a.m. operating brief with what changed, where money is leaking, and what needs a decision.",
       },
     ],
   },
@@ -47,64 +87,67 @@ const modules = [
 
 export default function FeaturesSection() {
   return (
-    <section id="features" className="mx-auto max-w-[72rem] px-6 md:px-8 py-28">
+    <section id="features" className="mx-auto max-w-[76rem] px-6 py-16 md:px-8">
       <motion.div
         initial={{ opacity: 0, y: 16 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-        className="text-center mb-20"
+        className="mb-12 max-w-3xl"
       >
-        <p className="text-xs font-medium tracking-widest uppercase text-muted-foreground mb-4">
-          Platform
+        <p className="mb-4 text-xs font-medium uppercase tracking-[0.18em] text-muted-foreground">
+          Platform modules
         </p>
         <h2 className="text-3xl font-semibold tracking-tight text-foreground sm:text-4xl md:text-5xl">
-          Two products. One stay layer.
+          One hotel operations brain across every workflow.
         </h2>
-        <p className="mt-4 mx-auto max-w-xl text-base text-muted-foreground leading-relaxed">
-          Telos connects the front desk, the in-room TV, the guest phone, and the PMS so hospitality teams can serve more guests without adding chaos.
+        <p className="mt-4 text-base leading-relaxed text-muted-foreground">
+          Telos connects guest intent to staff action, then turns the operating record into owner intelligence and revenue recommendations.
         </p>
       </motion.div>
 
-      <div className="space-y-20">
+      <div className="space-y-12">
         {modules.map((mod, modIdx) => (
           <motion.div
-            key={modIdx}
+            key={mod.title}
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-50px" }}
-            transition={{ duration: 0.6, delay: modIdx * 0.1, ease: [0.16, 1, 0.3, 1] }}
+            transition={{ duration: 0.6, delay: modIdx * 0.08, ease: [0.16, 1, 0.3, 1] }}
+            className="rounded-3xl border border-border bg-card p-6 md:p-8"
           >
-            <div className="flex items-center gap-3 mb-4">
-              <span className="inline-flex h-7 items-center rounded-full bg-foreground px-3 text-[11px] font-medium tracking-wide text-background uppercase">
-                {mod.label}
-              </span>
-            </div>
-            <h3 className="text-2xl font-semibold tracking-tight text-foreground mb-2 sm:text-3xl">
-              {mod.title}
-            </h3>
-            <p className="text-base text-muted-foreground leading-relaxed max-w-2xl mb-8">
-              {mod.description}
-            </p>
+            <div className="grid gap-8 lg:grid-cols-[0.85fr_1.15fr]">
+              <div>
+                <span className="inline-flex h-7 items-center rounded-full bg-foreground px-3 text-[11px] font-medium uppercase tracking-wide text-background">
+                  {mod.label}
+                </span>
+                <h3 className="mt-5 text-2xl font-semibold tracking-tight text-foreground sm:text-3xl">
+                  {mod.title}
+                </h3>
+                <p className="mt-3 max-w-2xl text-base leading-relaxed text-muted-foreground">
+                  {mod.description}
+                </p>
+              </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-              {mod.capabilities.map((cap, capIdx) => (
-                <motion.div
-                  key={capIdx}
-                  initial={{ opacity: 0, y: 12 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: 0.1 + capIdx * 0.08, ease: [0.16, 1, 0.3, 1] }}
-                  className="group rounded-2xl border border-border bg-card p-6 hover:bg-muted/50 transition-colors duration-300"
-                >
-                  <h4 className="text-sm font-semibold tracking-tight text-foreground mb-2">
-                    {cap.name}
-                  </h4>
-                  <p className="text-sm text-muted-foreground leading-relaxed">
-                    {cap.detail}
-                  </p>
-                </motion.div>
-              ))}
+              <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
+                {mod.capabilities.map((cap, capIdx) => (
+                  <motion.div
+                    key={cap.name}
+                    initial={{ opacity: 0, y: 12 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: 0.1 + capIdx * 0.08, ease: [0.16, 1, 0.3, 1] }}
+                    className="rounded-2xl border border-border bg-background p-5"
+                  >
+                    <h4 className="text-sm font-semibold tracking-tight text-foreground">
+                      {cap.name}
+                    </h4>
+                    <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                      {cap.detail}
+                    </p>
+                  </motion.div>
+                ))}
+              </div>
             </div>
           </motion.div>
         ))}

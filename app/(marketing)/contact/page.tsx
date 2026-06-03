@@ -25,14 +25,27 @@ import {
 
 const features = [
   { icon: <Users className="h-4 w-4" />, text: "Unlimited manager and staff seats" },
-  { icon: <Search className="h-4 w-4" />, text: "Guest profiles across properties" },
-  { icon: <FileText className="h-4 w-4" />, text: "Automated guest request capture" },
-  { icon: <BarChart2 className="h-4 w-4" />, text: "Stay and service analytics" },
+  { icon: <Search className="h-4 w-4" />, text: "Guest profiles and service history" },
+  { icon: <FileText className="h-4 w-4" />, text: "Daily operating brief" },
+  { icon: <BarChart2 className="h-4 w-4" />, text: "Horizon owner intelligence" },
   { icon: <Key className="h-4 w-4" />, text: "SSO" },
-  { icon: <Database className="h-4 w-4" />, text: "PMS, PBX, and TV integrations" },
-  { icon: <Activity className="h-4 w-4" />, text: "Front desk usage analytics" },
+  { icon: <Database className="h-4 w-4" />, text: "PMS, PBX, TV, RMS, and review integrations" },
+  { icon: <Activity className="h-4 w-4" />, text: "Revenue leakage and labor drag visibility" },
   { icon: <Lock className="h-4 w-4" />, text: "Internal access control" },
   { icon: <Share2 className="h-4 w-4" />, text: "Shared workflows across teams" },
+];
+
+const systemOptions = [
+  "PMS",
+  "PBX/call system",
+  "Guest messaging",
+  "Housekeeping",
+  "Maintenance",
+  "RMS/revenue management",
+  "Channel manager",
+  "POS/payments",
+  "Review platform",
+  "Other",
 ];
 
 type Status = "idle" | "sending" | "sent" | "error";
@@ -79,6 +92,7 @@ export default function ContactPage() {
       `Property size: ${field(fd, "companySize")}`,
       `Job title: ${field(fd, "jobTitle")}`,
       `Use case: ${field(fd, "useCase")}`,
+      `Current systems: ${fd.getAll("systems").filter((v) => typeof v === "string").join(", ") || "(none selected)"}`,
       `Evaluation stage: ${field(fd, "stage")}`,
       "",
       "Message:",
@@ -145,10 +159,10 @@ export default function ContactPage() {
           >
             <div className="mb-10">
               <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-foreground mb-4" style={{ fontFamily: "Georgia, serif" }}>
-                AI hospitality agents for your property
+                Request a Telos platform demo
               </h1>
               <p className="text-base text-muted-foreground">
-                Tell us about your hotel, portfolio, or guest experience rollout.
+                Tell us about your hotel stack, operating workflows, and where Horizon should connect first.
               </p>
             </div>
 
@@ -242,7 +256,8 @@ export default function ContactPage() {
                       <option value="" disabled>Select your use case</option>
                       <option value="Telos Haven guest app">Telos Haven guest app</option>
                       <option value="Telos Watch front desk copilot">Telos Watch front desk copilot</option>
-                      <option value="Both products">Both products</option>
+                      <option value="Telos Horizon owner intelligence">Telos Horizon owner intelligence</option>
+                      <option value="Full Telos platform">Full Telos platform</option>
                       <option value="Multi-property rollout">Multi-property rollout</option>
                       <option value="Custom integration">Custom integration</option>
                     </select>
@@ -261,13 +276,35 @@ export default function ContactPage() {
                   <ChevronDown className="absolute right-3 top-[38px] h-4 w-4 text-muted-foreground pointer-events-none" />
                 </div>
 
+                <fieldset className="space-y-3">
+                  <legend className="text-sm font-semibold text-foreground">
+                    What systems do you currently use?
+                  </legend>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                    {systemOptions.map((system) => (
+                      <label
+                        key={system}
+                        className="flex items-center gap-2 rounded-lg bg-secondary/50 px-3 py-2 text-sm text-muted-foreground"
+                      >
+                        <input
+                          name="systems"
+                          type="checkbox"
+                          value={system}
+                          className="h-4 w-4 accent-foreground"
+                        />
+                        {system}
+                      </label>
+                    ))}
+                  </div>
+                </fieldset>
+
                 <div className="space-y-2">
                   <Label htmlFor="message" className="text-sm font-semibold text-foreground">Can you share more about your business needs and challenges?</Label>
                   <Textarea 
                     name="message"
                     id="message" 
                     className="min-h-[100px] rounded-lg bg-secondary/50 border-0 focus-visible:ring-1 focus-visible:ring-foreground resize-none p-3 text-sm" 
-                    placeholder="e.g., We want to reduce front desk call volume and give guests TV and phone-based room control..." 
+                    placeholder="e.g., We want to reduce front desk call volume, connect PMS requests to housekeeping, and give owners a morning brief..." 
                   />
                 </div>
 
