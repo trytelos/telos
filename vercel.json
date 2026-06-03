@@ -15,6 +15,10 @@
     {
       "source": "/guestdemo/:path*",
       "destination": "https://guest-amber.vercel.app/guestdemo/:path*"
+    },
+    {
+      "source": "/rms-api/:path*",
+      "destination": "https://rms-eng.vercel.app/:path*"
     }
   ]
 }
